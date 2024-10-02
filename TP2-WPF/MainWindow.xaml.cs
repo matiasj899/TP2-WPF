@@ -42,6 +42,44 @@ public partial class MainWindow : Window
         }
 
     }
+    private void AgregarAlumnos(object sender, RoutedEventArgs e)
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            var userBox = new Border
+            {
+                BorderBrush = Brushes.Black,
+                BorderThickness = new System.Windows.Thickness(1),
+                Margin = new System.Windows.Thickness(5),
+                Padding = new System.Windows.Thickness(5),
+                Child = new StackPanel
+                {                                                                   //Crea los paneles en un bucle.
+                    Children =
+                    {
+                        new TextBlock { Text = "TEST"},
+                        new TextBlock { Text = "TEST"},
+                        new TextBlock { Text = "TEST"},
+                    }
+                }
+            };
+            if (contador == 0)
+            {
+                PrimerPanel.Children.Add(userBox);
+                contador++;
+            }
+            else if (contador == 1)
+            {
+                SegundoPanel.Children.Add(userBox);      //Decide en qué panel se va a añadir el alumno dependiendo
+                contador++;                              // de la variable contador que se reinicia cada que llega
+            }                                            // al tercer panel.
+            else if (contador == 2)
+            {
+                TercerPanel.Children.Add(userBox);
+                contador = 0;
+            }
+        }
+
+    }
 
     private void ActualizarLista()
     {

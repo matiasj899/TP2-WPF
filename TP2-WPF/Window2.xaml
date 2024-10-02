@@ -13,6 +13,7 @@
             <ColumnDefinition Width="210"></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
+        
         <StackPanel Grid.Column="0">
             <TextBlock Text="     Nombre:" Background="LightGray" Foreground="Black" Margin="0,4,0,2"></TextBlock>
             <TextBlock Text="        DNI:" Background="LightGray" Foreground="Black" Margin="0,2,0,2"></TextBlock>
