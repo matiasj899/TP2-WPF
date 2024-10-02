@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP2_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900">
+        Title="MainWindow" Height="600" Width="870">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="17"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
             <ColumnDefinition Width="270"></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
             <ColumnDefinition Width="270"></ColumnDefinition>
@@ -18,22 +18,24 @@
 
         </Grid.ColumnDefinitions>
 
-        <StackPanel Name="SegundoPanel" Grid.Column="3">
-            <Button Content="caca" Visibility="Hidden"></Button>
-            <Button Content="Agregar usuario" Click="AgregarUsuario" Width="200"/>
-            <Button Content="caca" Visibility="Hidden"></Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="550"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="3" Grid.Row="0">
+            <Button Content="caca" Visibility="Hidden" Height="15"></Button>
+            <Button Content="Agregar usuario" Click="AgregarAlumno" Width="200" Height="20"></Button>
+            <Button Content="caca" Visibility="Hidden" Height="15"></Button>
         </StackPanel>
-        
-        <StackPanel Name="TercerPanel" Grid.Column="5">
-            <Button Content="caca" Visibility="Hidden"></Button>
-            <Button Content="Agregar usuario" Visibility="Hidden" Width="200"/>
-            <Button Content="caca" Visibility="Hidden"></Button>
+
+        <StackPanel Name="SegundoPanel" Grid.Column="3" Grid.Row="1">
         </StackPanel>
-        
-        <StackPanel Name="PrimerPanel" Grid.Column="1">
-            <Button Content="caca" Visibility="Hidden"></Button>
-            <Button Content="Agregar usuario" Visibility="Hidden" Width="200"/>
-            <Button Content="caca" Visibility="Hidden"></Button>
+
+        <StackPanel Name="TercerPanel" Grid.Column="5" Grid.Row="1"> 
+        </StackPanel>
+
+        <StackPanel Name="PrimerPanel" Grid.Column="1" Grid.Row="1">
         </StackPanel>
     </Grid>
 </Window>
