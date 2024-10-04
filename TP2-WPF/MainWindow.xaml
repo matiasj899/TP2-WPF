@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP2_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="650" Width="903">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="550"></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <Button Content="Agregar usuario" Click="AgregarAlumno" Width="200" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+        <Button Content="Tester" Click="AgregarAlumnos" Width="200" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="57,0,0,0"></Button>
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" MinHeight="200">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="270"></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition Width="270"></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition Width="270"></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="PrimerPanel" Grid.Column="1" ></StackPanel>
+                <StackPanel Name="SegundoPanel" Grid.Column="3" ></StackPanel>
+                <StackPanel Name="TercerPanel" Grid.Column="5"></StackPanel>
+
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Window>
