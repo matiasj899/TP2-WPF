@@ -137,3 +137,9 @@ public partial class MainWindow : Window
         }
     }
 }
+
+float NotaFinal(float parcial1, float parcial2)
+{
+    float notaFinal = (parcial1 + parcial2) / 2;
+    return notaFinal;
+}
