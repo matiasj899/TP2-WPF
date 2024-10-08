@@ -15,9 +15,9 @@
         </Grid.ColumnDefinitions>
         
         <StackPanel Grid.Column="0">
-            <TextBlock Text="     Nombre:" Background="LightGray" Foreground="Black" Margin="0,4,0,2"></TextBlock>
-            <TextBlock Text="        DNI:" Background="LightGray" Foreground="Black" Margin="0,2,0,2"></TextBlock>
-            <TextBlock Text="      Legajo:" Background="LightGray" Foreground="Black" Margin="0,2,0,2"></TextBlock>
+            <TextBlock Text="     Nombre:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="        DNI:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
+            <TextBlock Text="      Legajo:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
 
 
         </StackPanel>
@@ -26,7 +26,7 @@
             <TextBox Name="DNIBox" BorderThickness="0" Margin="0,2,0,2"></TextBox>
             <TextBox Name="LegajoBox" BorderThickness="0" Margin="0,2,0,2"></TextBox>
             
-            <Button Content="Guardar cambios" Click="AgregarAlumno2"></Button>
+            <Button Content="Guardar cambios" Click="AgregarAlumno2" Background="#FF5F9EA0" ></Button>
 
         </StackPanel>
     </Grid>
