@@ -187,5 +187,7 @@ namespace TP2_WPF
                             $"Parcial 2 (Max): {estudiante.GetParcial2Max()}\n" +
                             $"Nota Final: {estudiante.GetNotaFinal()}");
         }
+
+       
     }
 }
