@@ -68,7 +68,35 @@ namespace TP2_WPF
                 DialogResult = true;
                 Close() ;
             }
+        }
+             class Estudiante
+        {
+            private bool tp1;
+            private bool tp2;
+            private bool tp3;
+            private bool tp4;
+            public Estudiante(bool tp1Entregado, bool tp2Entregado, bool tp3Entregado, bool tp4Entregado)
+            {
+                tp1 = tp1Entregado;
+                tp2 = tp2Entregado;
+                tp3 = tp3Entregado;
+                tp4 = tp4Entregado;
+            }
 
+            public bool GetTP1() {return tp1;}
+            public bool GetTP2() {return tp2;}
+            public bool GetTP3() {return tp3;}
+            public bool GetTP4() {return tp4;}
+        }
+
+        private void MostrarEstadoTPs()
+        {
+            Estudiante estudiante = new Estudiante(true, false, true, true);
+
+            MessageBox.Show($"TP1 entregado en fecha: {estudiante.GetTP1()}\n" +
+                            $"TP2 entregado en fecha: {estudiante.GetTP2()}\n" +
+                            $"TP3 entregado en fecha: {estudiante.GetTP3()}\n" +
+                            $"TP4 entregado en fecha: {estudiante.GetTP4()}");
 
         }
     }
