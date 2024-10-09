@@ -16,7 +16,7 @@ namespace TP2_WPF
         public string Situacion { get; private set; } = null!;
         private const int LongitudMaximaNombre = 50;
         private const int MaxDNI = 100000000;
-        private const int MaxLegajo = 100000000;
+        private const int MaxLegajo = 100000;
 
         // Nuevas propiedades para los datos de la materia
         public string Materia { get; private set; } = null!;
@@ -54,10 +54,20 @@ namespace TP2_WPF
                 MessageBox.Show("DNI inválido, intente de nuevo.");
             else
                 bul++;
-            if (!int.TryParse(LegajoTexto, out legajo) || legajo < 0 || legajo > MaxLegajo) // Revisa si el tipo de datos es correcto
-                MessageBox.Show("Legajo inválido, intente de nuevo.");
+            HashSet<int> legajosUsados = new HashSet<int>();
+
+
+            Random random = new Random(); // genera números aleatorios
+
+            if (!int.TryParse(LegajoTexto, out legajo) || legajo < 0 || legajo > MaxLegajo)
+            {
+                legajo = random.Next(0, MaxLegajo + 1);
+                MessageBox.Show($"Nuevo usuario: se le ha asignado el número de legajo {legajo}.");
+            }
             else
+            {
                 bul++;
+            }
 
             // Validación del ComboBox de Situación
             if (SituacionComboBox.SelectedItem == null)
