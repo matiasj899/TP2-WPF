@@ -5,34 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP2_WPF"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="300">
+        Title="Window2" Height="600" Width="341">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
             <ColumnDefinition Width="10"></ColumnDefinition>
-            <ColumnDefinition Width="210"></ColumnDefinition>
-
+            <ColumnDefinition Width="142.177"></ColumnDefinition>
+            <ColumnDefinition Width="67.823"/>
         </Grid.ColumnDefinitions>
 
+        <!-- Formulario de Datos del Alumno -->
         <StackPanel Grid.Column="0">
             <TextBlock Text="     Nombre:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
             <TextBlock Text="        DNI:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
             <TextBlock Text="      Legajo:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
-            <TextBlock Text="   Situación:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
-
+           
         </StackPanel>
-        <StackPanel Grid.Column="2" >
-            <TextBox Name="NombreBox" BorderThickness="0" Margin="0,4,0,2" ></TextBox>
-            <TextBox Name="DNIBox" BorderThickness="0" Margin="0,2,0,2"></TextBox>
-            <TextBox Name="LegajoBox" BorderThickness="0" Margin="0,2,0,2"></TextBox>
-            <ComboBox Name="SituacionComboBox" Margin="0,2,0,2" >
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2">
+            <TextBox Name="NombreBox" BorderThickness="1" Margin="0,4,0,2" ></TextBox>
+            <TextBox Name="DNIBox" BorderThickness="1" Margin="0,2,0,2"></TextBox>
+            <TextBox Name="LegajoBox" BorderThickness="1" Margin="0,2,0,2"></TextBox>
+          
+        </StackPanel>
+
+        <!-- Formulario de Datos de la Materia -->
+        <StackPanel Margin="0,112,0,-92">
+            <TextBlock Text="   Materia:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text=" Asistencia:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="  TP1 en fecha:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="  TP2 en fecha:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="  TP3 en fecha:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="  TP4 en fecha:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="   Parcial 1:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="   Parcial 2:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+            <TextBlock Text="   Situación:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
+            <TextBlock Text="   Nota final:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Margin="0,112,0,-92" Grid.ColumnSpan="2">
+            <TextBox Name="MateriaBox" BorderThickness="1" Margin="0,4,0,2"></TextBox>
+            <CheckBox Name="AsistenciaBox" Content="Presente" Margin="0,4,0,2" ></CheckBox>
+            <CheckBox Name="TP1Box" Content="Entregado" Margin="0,4,0,2"></CheckBox>
+            <CheckBox Name="TP2Box" Content="Entregado" Margin="0,4,0,2"></CheckBox>
+            <CheckBox Name="TP3Box" Content="Entregado" Margin="0,4,0,2"></CheckBox>
+            <CheckBox Name="TP4Box" Content="Entregado" Margin="0,4,0,2"></CheckBox>
+          
+                <TextBox Name="Parcial1MinBox"  BorderThickness="1" Margin="0,4,0,2" ></TextBox>
+              
+         
+          
+                <TextBox Name="Parcial2MinBox" BorderThickness="1" Margin="0,4,0,2" ></TextBox>
+              
+            <ComboBox Name="SituacionComboBox" Margin="0,2,0,2">
                 <ComboBoxItem Content="Promocionó"></ComboBoxItem>
                 <ComboBoxItem Content="Rinde Final"></ComboBoxItem>
             </ComboBox>
+            <TextBox Name="NotaFinalBox" BorderThickness="1" Margin="0,4,0,2"></TextBox>
 
-            <Button Content="Guardar cambios" Click="AgregarAlumno2" Background="#FF5F9EA0" ></Button>
-
+            <Button Content="Guardar cambios" Click="AgregarAlumno2" Background="#FF5F9EA0" Margin="0,20,0,0"></Button>
         </StackPanel>
     </Grid>
-
 </Window>
