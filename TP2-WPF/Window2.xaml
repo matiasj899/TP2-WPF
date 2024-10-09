@@ -13,22 +13,26 @@
             <ColumnDefinition Width="210"></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
-        
+
         <StackPanel Grid.Column="0">
             <TextBlock Text="     Nombre:" Background="#FF5F9EA0" Foreground="Black" Margin="0,4,0,2"></TextBlock>
             <TextBlock Text="        DNI:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
             <TextBlock Text="      Legajo:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
-
+            <TextBlock Text="   Situación:" Background="#FF5F9EA0" Foreground="Black" Margin="0,2,0,2"></TextBlock>
 
         </StackPanel>
         <StackPanel Grid.Column="2" >
             <TextBox Name="NombreBox" BorderThickness="0" Margin="0,4,0,2" ></TextBox>
             <TextBox Name="DNIBox" BorderThickness="0" Margin="0,2,0,2"></TextBox>
             <TextBox Name="LegajoBox" BorderThickness="0" Margin="0,2,0,2"></TextBox>
-            
+            <ComboBox Name="SituacionComboBox" Margin="0,2,0,2" >
+                <ComboBoxItem Content="Promocionó"></ComboBoxItem>
+                <ComboBoxItem Content="Rinde Final"></ComboBoxItem>
+            </ComboBox>
+
             <Button Content="Guardar cambios" Click="AgregarAlumno2" Background="#FF5F9EA0" ></Button>
 
         </StackPanel>
     </Grid>
-    
+
 </Window>

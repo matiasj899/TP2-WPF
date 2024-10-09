@@ -36,7 +36,7 @@ public partial class MainWindow : Window
         var Window2= new Window2() ;
         if(Window2.ShowDialog() == true)
         {
-            Alumnos nuevoAlumno = new Alumnos(Window2.Nombre, Window2.DNI, Window2.Legajo) ; 
+            Alumnos nuevoAlumno = new Alumnos(Window2.Nombre, Window2.DNI, Window2.Legajo,Window2.Situacion) ; 
             GuardarAlumno(nuevoAlumno) ; //Recibe los datos de la segunda ventana y los guarda.
             ActualizarLista() ; 
         }
@@ -103,6 +103,7 @@ public partial class MainWindow : Window
                         new TextBlock { Text = alumnos[i].Nombre},
                         new TextBlock { Text = Convert.ToString(alumnos[i].DNI)},
                         new TextBlock { Text = Convert.ToString(alumnos[i].Legajo)},
+                        new TextBlock { Text = Convert.ToString(alumnos[i].Situacion)},
                     }
                 }
             };
@@ -124,22 +125,25 @@ public partial class MainWindow : Window
         }
     }
 
+
+    float NotaFinal(float parcial1, float parcial2)
+    {
+        float notaFinal = (parcial1 + parcial2) / 2;
+        return notaFinal;
+    }
+
     public class Alumnos
     {
         public string Nombre ;
         public int DNI ;
         public int Legajo ;
-        public Alumnos(string nombre, int dni, int legajo)
+        public string Situacion;
+        public Alumnos(string nombre, int dni, int legajo,string situacion)
         {
             Nombre = nombre ;
             DNI = dni ;
             Legajo = legajo ;
+            Situacion = situacion;
         }
     }
-}
-
-float NotaFinal(float parcial1, float parcial2)
-{
-    float notaFinal = (parcial1 + parcial2) / 2;
-    return notaFinal;
 }
