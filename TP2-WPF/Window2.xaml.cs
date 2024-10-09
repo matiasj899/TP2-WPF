@@ -16,7 +16,7 @@ namespace TP2_WPF
         public string Situacion { get; private set; } = null!;
         private const int LongitudMaximaNombre = 50;
         private const int MaxDNI = 100000000;
-        private const int MaxLegajo = 100000000;
+        private const int MaxLegajo = 100000;
 
         // Nuevas propiedades para los datos de la materia
         public string Materia { get; private set; } = null!;
@@ -55,7 +55,9 @@ namespace TP2_WPF
             if (!int.TryParse(LegajoTexto, out legajo) || legajo < 0 || legajo > MaxLegajo)
                 MessageBox.Show("Legajo inválido, intente de nuevo.");
             else
+            {
                 bul++;
+            }
 
             if (SituacionComboBox.SelectedItem == null)
                 MessageBox.Show("Debe seleccionar la situación del alumno (Promocionó o Rinde Final).");
