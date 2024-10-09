@@ -23,6 +23,7 @@ namespace TP2_WPF
         public string Nombre { get; private set; } = null!;
         public int DNI { get; private set; } 
         public int Legajo { get; private set; }
+        public string Situacion { get; private set; } = null!;
         private const int LongitudMaximaNombre = 50 ;
         private const int MaxDNI = 100000000;
         private const int MaxLegajo = 100000000;
@@ -60,16 +61,33 @@ namespace TP2_WPF
                 MessageBox.Show("Legajo inválido, intente de nuevo.");
             else
                 bul++;
-            if(bul == 4) //Si todos los ticks pasan, se le da los valores de los TextBox a las variables 
-            {            // para ser enviadas a la lista del main
-                Nombre = NombreBox.Text ;
-                DNI = int.Parse(DNIBox.Text);
-                Legajo = int.Parse(LegajoBox.Text);
+            // Validación del ComboBox de Situación
+            if (SituacionComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar la situación del alumno (Promocionó o Rinde Final).");
+            }
+            else
+            {
+                // Almacena la situación seleccionada
+                bul++;
+            }
+
+            // Si todas las validaciones pasan (5 ticks)
+            if (bul == 5)
+            {
+                Nombre = NombreBox.Text;
+                DNI = dni;
+                Legajo = legajo;
+                ComboBoxItem selectedSituacion = (ComboBoxItem)SituacionComboBox.SelectedItem;
+                Situacion = selectedSituacion.Content.ToString();
+                // Se cierra la ventana y se envían los datos
                 DialogResult = true;
-                Close() ;
+                Close();
             }
 
 
         }
+
+       
     }
 }
